@@ -1,0 +1,5 @@
+dnslib
+BeautifulSoup4
+dnspython
+netaddr
+watchdog

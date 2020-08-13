@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dns_server_config>
+    <setup_config>
+        <dns_server_udp_ip>192.168.0.121</dns_server_udp_ip>
+        <dns_server_udp_port>53</dns_server_udp_port>
+        <dns_server_tcp_ip>127.0.0.1</dns_server_tcp_ip>
+        <dns_server_tcp_port>53</dns_server_tcp_port>
+        <default_auth_dns_server_ip>8.8.8.8</default_auth_dns_server_ip>
+        <default_auth_dns_server_port>53</default_auth_dns_server_port>
+        <dns_server_recv_bytes_size>1024</dns_server_recv_bytes_size>
+        <dns_auth_server_recv_bytes_size>4096</dns_auth_server_recv_bytes_size>
+        <dns_server_log_debug_on_console>true</dns_server_log_debug_on_console>
+        <dns_cache_size>5000</dns_cache_size> <!-- Numeric Value Required (in Secs) Example [5000, 3000, 10000, 7500]  -->
+        <dns_cache_ttl>90</dns_cache_ttl> <!-- Numeric Value Required (in Secs) Example [100, 30, 50, 500, 90]  -->
+        <category_match_type>WILDCARD</category_match_type> <!-- Single String Value Required Example [WILDCARD] or [EXACT] -->
+    </setup_config>
+    <blocker_policy> <!-- Process Step1 -->
+        <blocked>
+            <block_policy_name>BLOCK LIST</block_policy_name>
+            <block_policy_description>Block all patterns and category</block_policy_description>
+            <block_policy_regex_pattern>doubleclick.(net|com)$,pubmatic,ads,scorecardresearch,googlesyndication,quantserve,porn,xxx,sex,xvideos</block_policy_regex_pattern> <!-- Might Create PROBLEM use comma for seperator-->
+            <block_policy_webcategory_list>Advertisements and Trackers,Google</block_policy_webcategory_list>
+        </blocked>
+    </blocker_policy>
+    <allower_policy> <!-- Process Step 2-->
+        <allowed>
+            <allow_policy_name>ALLOW LIST</allow_policy_name>
+            <allow_policy_description>Allow Whitelisted Patterns and Category</allow_policy_description>
+            <allow_policy_regex_pattern></allow_policy_regex_pattern>
+            <allow_policy_webcategory_list>WhiteList</allow_policy_webcategory_list>
+        </allowed>
+    </allower_policy>
+</dns_server_config>

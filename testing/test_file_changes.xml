@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dns_server_config>
+    <setup_config>
+        <dns_server_udp_ip>192.168.0.121</dns_server_udp_ip>
+        <dns_server_udp_port>53</dns_server_udp_port>
+        <dns_server_tcp_ip>127.0.0.1</dns_server_tcp_ip>
+        <dns_server_tcp_port>53</dns_server_tcp_port>
+        <default_auth_dns_server_ip>8.8.8.8</default_auth_dns_server_ip>
+        <default_auth_dns_server_port>53</default_auth_dns_server_port>
+        <dns_server_recv_bytes_size>1024</dns_server_recv_bytes_size>
+        <dns_auth_server_recv_bytes_size>4096</dns_auth_server_recv_bytes_size>
+        <dns_server_log_debug_on_console>true</dns_server_log_debug_on_console>
+    </setup_config>
+    <dns_policy_config>
+        <user_groups>
+            <user_group>
+                <status>ENABLE</status>
+                <user_group_name>UserGroup[Network:10.0.0.0/24]</user_group_name>
+                <user_group_description>All users with ip in the Network: 10.0.0.0/24</user_group_description>
+                <users_ip_list>10.0.0.0/24,10.0.2.1-10.0.2.54</users_ip_list>
+                <users_mac_list>20-E2-17-09-0C-B7</users_mac_list>
+            </user_group>
+            <user_group>
+                <status>ENABLE</status>
+                <user_group_name>UserGroup[Network:192.168.0.0/16]</user_group_name>
+                <user_group_description>All users with ip in the Network: 192.168.0.0/16</user_group_description>
+                <users_ip_list>192.168.0.0/16</users_ip_list>
+                <users_mac_list>20-E2-17-09-0C-B7</users_mac_list>
+            </user_group>
+        </user_groups>
+        <requested_domain>
+            <request>
+                <status>ENABLE</status>
+                <req_name>ADS USING REGEX IDENTIFIER</req_name>
+                <req_description>Block all ADS using Regex, This will capture all Regex based domain , user can provide any regex pattern as per their need</req_description>
+                <req_domain_name_list>doubleclick|googleads|ashish.com,facebok.com</req_domain_name_list>
+                <req_querytype_list>A,AAAA</req_querytype_list>
+            </request>
+        </requested_domain>
+        <response_ip>
+            <response>
+                <status>ENABLE</status>
+                <res_name>MALICIOUS IP</res_name>
+                <res_description>DETECTING AND IDENTIFYING MALICIOUS WEBSITE BY THEIR IP received after DNS Resolution</res_description>
+                <res_cname_list>googlemail.l.google.com,m.yahoo.com,dns.google</res_cname_list>
+                <res_ip_list>19.19.19.19</res_ip_list>
+            </response>
+        </response_ip>
+        <access_policies>
+            <policy>
+                <status>ENABLE</status>
+                <policy_name>Block Ads</policy_name>
+                <policy_description>Block Ads for all users</policy_description>
+                <user_group_list></user_group_list>
+                <request_list></request_list>
+                <request_list_to_web_category_list_connector>OR</request_list_to_web_category_list_connector> <!-- It can only be AND / OR-->
+                <web_category_list>Advertisements and Trackers</web_category_list>
+                <response_list></response_list>
+                <policy_action>BLOCK</policy_action>
+            </policy>
+            <policy>
+                <status>DISABLE</status>
+                <policy_name>BLOCK ADS &amp; TRACKERS USING WEB CATEGORY FOR ALL USERS</policy_name>
+                <policy_description>BLOCK ALL IDENTIFIED ADS</policy_description>
+                <user_group_list></user_group_list>
+                <request_list></request_list>
+                <request_list_to_web_category_list_connector>OR</request_list_to_web_category_list_connector> <!-- It can only be AND / OR-->
+                <web_category_list>Advertisements and Trackers</web_category_list>
+                <response_list></response_list>
+                <policy_action>BLOCK</policy_action>
+            </policy>
+        </access_policies>
+    </dns_policy_config>
+</dns_server_config>
