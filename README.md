@@ -1,11 +1,5 @@
 # A Simple Python Based Custom Dns Filter
 
-It can be used to block dns query, you can add up all
-* ads domains
-* adult domains
-* phishing domains
-* any domain that you feel should be blocked
-
 ## Few Info [My ViewPoints & Some Research Work]
 
 This is a basic implementation of a simple DNS Proxy
@@ -28,6 +22,3 @@ Few Listed:
 > Well My Broader Approach for this Custom DNS Server Filtering was to ease the way of DNS Filtering by using 
 > 1. Categories: Custom & Predefined Web Category Stored in SQLite or May be a File
 > 2. Regex: Almost Present in any DNS Filtering or Web Solution But to extend it and use a Grouping Factor
-
-
-
