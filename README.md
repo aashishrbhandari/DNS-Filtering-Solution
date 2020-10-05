@@ -20,5 +20,5 @@ Few Listed:
 | Pi-Hole | https://github.com/pi-hole/pi-hole/#one-step-automated-install |
 
 > Well My Broader Approach for this Custom DNS Server Filtering was to ease the way of DNS Filtering by using 
-> 1. Categories: Custom & Predefined Web Category Stored in SQLite or May be a File
-> 2. Regex: Almost Present in any DNS Filtering or Web Solution But to extend it and use a Grouping Factor
+> - [x] Categories: Custom & Predefined Web Category Stored in SQLite or May be a File
+> - [x] Regex: Almost Present in any DNS Filtering or Web Solution But to extend it and use a Grouping Factor
