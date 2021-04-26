@@ -2,18 +2,21 @@
 
 #### Few Info [My ViewPoints & Some Research Work]
 
-This is a basic implementation of a simple DNS Proxy
-(because it accepts a DNS Query from the Client and then Checks for Policy 
+###### Implementation
 
--> Cache (If Not) 
+- This is a basic implementation of a simple DNS Proxy
+- Because it accepts a DNS Query from the Client and then Checks for Policy 
+- Cache (If Not) 
+- Queries Root DNS Server 
+- Returns Response back to Client as well as Caches)
+- Customizable (and it can be further expanded)
 
--> Queries Root DNS Server 
+I worked on it for few days :) 
 
--> Returns Response back to Client as well as Caches)
-and it can be further expanded
+This might not be one of a kind project as their are many DNS based Filtering Projects
 
-I worked on it for few days :) This might not be one of a kind project as their are many DNS based Filtering Projects
-Few Listed:
+#### DNS Security Solution:
+> My Personal Fav List
 
 | Dns Security Solution | Doc Links |
 | --------------------- | --------- |
