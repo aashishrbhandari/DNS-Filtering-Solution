@@ -1,11 +1,14 @@
-# A Simple Python Based Custom Dns Filter
+### A Simple Python Based Custom Dns Filter
 
-## Few Info [My ViewPoints & Some Research Work]
+#### Few Info [My ViewPoints & Some Research Work]
 
 This is a basic implementation of a simple DNS Proxy
 (because it accepts a DNS Query from the Client and then Checks for Policy 
+
 -> Cache (If Not) 
+
 -> Queries Root DNS Server 
+
 -> Returns Response back to Client as well as Caches)
 and it can be further expanded
 
