@@ -1,27 +1,31 @@
 ### A Simple Python Based Custom Dns Filter
+I worked on it for few days :) .
+This might not be one of a kind project as their are many DNS based Filtering Projects
 
-#### Few Info [My ViewPoints & Some Research Work]
+### Few Info [My ViewPoints & Some Research Work]
 
-###### Implementation
+#### Implementation
 
 - This is a basic implementation of a simple DNS Proxy
-- Because it accepts a DNS Query from the Client and then Checks for Policy 
-- Cache (If Not) 
-- Queries Root DNS Server 
-- Returns Response back to Client as well as Caches)
 - Customizable (and it can be further expanded)
+- Quick Flow
 
-I worked on it for few days :) 
+(1) It accepts a DNS Query from the Client and then Checks for Policy 
 
-This might not be one of a kind project as their are many DNS based Filtering Projects
+(2) Checks Cache (If Not) 
+            
+(3) Queries Root DNS Server
+
+(4) Returns Response back to Client as well as Caches
+
+
 
 #### DNS Security Solution:
 > My Personal Fav List
 
 | Dns Security Solution | Doc Links |
 | --------------------- | --------- |
-| AdGuard Home (DNS) | https://adguard.com/en/adguard-home/overview.html |
-| AdGuard Docs | https://adguard.com/en/blog/in-depth-review-adguard-home.html |
+| AdGuard Home (DNS) | https://adguard.com/en/adguard-home/overview.html, https://github.com/AdguardTeam/AdguardHome, https://adguard.com/en/blog/in-depth-review-adguard-home.html |
 | DilaDele DnsSafety | https://github.com/diladele/dnssafety |
 | Pi-Hole | https://github.com/pi-hole/pi-hole/#one-step-automated-install |
 
