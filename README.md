@@ -1,7 +1,5 @@
-### A Simple Python Based Custom Dns FilterCancel changes
-A Simple Python Based DNS Blocker (~Filtering) Service.  Give it a Shot.
-
-I worked on it for few days :) .
+# Simple DNS Filtering Service
+A Simple Python Based Custom Dns FilterCancel changes. A Simple Python Based DNS Blocker (~Filtering) Service.  Give it a Shot. I worked on it for few days :) .
 This might not be one of a kind project as their are many DNS based Filtering Projects
 
 ### Few Info [My ViewPoints & Some Research Work]
